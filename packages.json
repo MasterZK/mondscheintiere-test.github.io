@@ -1,5 +1,5 @@
 {
-    "homepage": "https://MasterZK.github.io/mondscheintiere-test.github.io",
+    "homepage": "https://MasterZK.github.io/",
 
     "scripts": {
         "predeploy": "npm run build",
