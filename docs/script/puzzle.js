@@ -18,7 +18,7 @@
     function init() {
         _img = new Image();
         _img.addEventListener('load', onImage, false);
-        _img.src = "../img/cover.jpg";
+        _img.src = "./img/cover.jpg";
     }
 
     function onImage(e) {
