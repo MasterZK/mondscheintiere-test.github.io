@@ -24,11 +24,13 @@ body {
 .leftcolumn {
     float: left;
     width: 75%;
+    padding-left: 10px;
 }
 
 .rightcolumn {
-    float: left;
+    float: right;
     width: 25%;
+    padding-right: 10px;
     background-color: #f1f1f1;
     padding-left: 20px;
 }
