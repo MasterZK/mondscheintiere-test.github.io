@@ -1,6 +1,11 @@
+html {
+    scroll-behavior: smooth
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
+    overflow-x: hidden;
     background: #f1f1f1;
 }
 
@@ -8,13 +13,7 @@ body {
     box-sizing: border-box;
 }
 
-.header {
-    padding: 30px;
-    text-align: center;
-    background: white;
-}
-
-.footer {
+.footer-wrapper {
     text-align: center;
     background-color: gray;
     padding: 20px;
