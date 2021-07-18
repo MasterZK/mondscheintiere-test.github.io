@@ -18,17 +18,39 @@ body {
     padding: 0;
 }
 
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: #25385a79;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1a273f;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #121a2b;
+}
+
 ul {
     list-style: none;
     padding-left: 0;
 }
 
 .header {
-    background-image: url("../img/banner_high-res.jpg");
+    background: url("../img/banner_high-res.jpg") no-repeat center center fixed;
     background-size: cover;
-    height: 100%;
-    width: 100%;
+    height: 100vmin;
+    max-width: 100%;
     position: relative;
+}
+
+@media only screen and (max-width: 1000px) {
+    .header {
+        height: fit-content;
+    }
 }
 
 .header-box {
@@ -185,4 +207,11 @@ footer a:hover {
         padding-left: 10px;
         padding-right: 10px;
     }
+}
+
+#main {
+    width: device-width;
+    max-width: 800px;
+    margin: auto;
+    padding: 16px;
 }
