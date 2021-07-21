@@ -53,17 +53,9 @@ ul {
   position: relative;
 }
 
-@media only screen and (max-width: 1000px) {
-  .header {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-  }
-}
-
 .header-box {
   min-width: 100%;
-  min-height: 100%;
+  height: calc(100vh - 57px);
   line-height: 1;
   padding: 15px 15px;
   -webkit-backdrop-filter: blur(10px);
@@ -77,6 +69,19 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media only screen and (max-width: 1000px) {
+  .header {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .header-box {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
 }
 
 .justify-start {
@@ -96,7 +101,9 @@ ul {
           justify-content: flex-end;
   list-style: none;
   margin: 0;
-  background-color: #12355b;
+  background-color: transparent;
+  -webkit-backdrop-filter: blur(25px);
+  backdrop-filter: blur(25px);
 }
 
 .navigation a {
@@ -133,6 +140,9 @@ ul {
     padding: 10px;
     border-top: 1px solid rgba(255, 255, 255, 0.3);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .justify-start {
+    margin-right: 0px;
   }
 }
 
@@ -256,5 +266,11 @@ footer a:hover {
   max-width: 800px;
   margin: auto;
   padding: 16px;
+}
+
+#main h2 {
+  font-size: larger;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 /*# sourceMappingURL=index-style.css.map */
