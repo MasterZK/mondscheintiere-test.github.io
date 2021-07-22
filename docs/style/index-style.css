@@ -1,9 +1,15 @@
+@font-face {
+  font-family: Cafeteria;
+  src: url("../fonts/CafeteriaBlack.ttf");
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
   font-family: "Merriweather", serif;
+  font-size: 100%;
   margin: 0;
   overflow-x: hidden;
   background: #f1f1f1;
@@ -15,6 +21,13 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.title-font {
+  font-family: "Cafeteria";
+  font-size: 4em;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 * {
@@ -43,6 +56,13 @@ body {
 ul {
   list-style: none;
   padding-left: 0;
+}
+
+.main-body {
+  width: device-width;
+  max-width: 800px;
+  margin: auto;
+  padding: 16px;
 }
 
 .header {
@@ -259,18 +279,5 @@ footer a:hover {
     padding-left: 10px;
     padding-right: 10px;
   }
-}
-
-#main {
-  width: device-width;
-  max-width: 800px;
-  margin: auto;
-  padding: 16px;
-}
-
-#main h2 {
-  font-size: larger;
-  padding-top: 10px;
-  padding-bottom: 10px;
 }
 /*# sourceMappingURL=index-style.css.map */
