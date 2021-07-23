@@ -26,7 +26,7 @@
     function init() {
         _img = new Image();
         _img.addEventListener('load', onImage, false);
-        _img.src = "/docs/img/cover.jpg";
+        _img.src = "/docs/img/cover_v2.jpg";
     }
 
     function onImage(e) {
@@ -82,6 +82,7 @@
             return;
         }
         _stage.drawImage(_img, 0, 0, _img.width, _img.height, 0, 0, _puzzleWidth, _puzzleHeight);
+        createTitle("Click to Start Puzzle");
     }
 
     function initPuzzle() {
