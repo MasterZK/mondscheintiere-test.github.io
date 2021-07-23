@@ -26,7 +26,7 @@
     function init() {
         _img = new Image();
         _img.addEventListener('load', onImage, false);
-        _img.src = "/docs/img/cover_v2.jpg";
+        _img.src = "https://masterzk.github.io/mondscheintiere-test.github.io/docs/img/cover_v2.jpg";
     }
 
     function onImage(e) {
