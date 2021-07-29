@@ -26,7 +26,7 @@
     function init() {
         _img = new Image();
         _img.addEventListener('load', onImage, false);
-        _img.src = "img/cover_v2.jpg";
+        _img.src = "../img/cover_v2.jpg";
     }
 
     function onImage(e) {
@@ -82,7 +82,7 @@
             return;
         }
         _stage.drawImage(_img, 0, 0, _img.width, _img.height, 0, 0, _puzzleWidth, _puzzleHeight);
-        createTitle("Click to Start Puzzle");
+        createTitle("Klick auf das Bild um das Puzzle zu starten!");
     }
 
     function initPuzzle() {
@@ -94,7 +94,7 @@
         _currentPiece = null;
         _currentDropPiece = null;
         _stage.drawImage(_img, 0, 0, _img.width, _img.height, 0, 0, _puzzleWidth, _puzzleHeight);
-        createTitle("Click to Start Puzzle");
+        createTitle("Klick auf das Bild um das Puzzle zu starten!");
         buildPieces();
     }
 
@@ -271,6 +271,7 @@
 
     function resetPuzzleAndCheckWin() {
         _stage.clearRect(0, 0, _puzzleWidth, _puzzleHeight);
+        _stage.globalAlpha = 1;
         var gameWin = true;
         var i;
         var piece;

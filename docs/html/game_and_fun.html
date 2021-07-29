@@ -4,8 +4,8 @@
 <html>
 
 <head>
-    <title>Privacy Policy - Mondscheintiere</title>
-    <link rel="icon" href="../img/girl_frei.png">
+    <title>Spiel und Spaß - Mondscheintiere</title>
+    <link rel="icon" href="../img/Boy_frei.png">
 
     <meta property="og:image" content="https://i.imgur.com/zry0vfF.jpg">
     <meta property="og:title" content="Das Geneimnis um die Mondscheintiere">
@@ -22,9 +22,11 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../style/index-style.css">
+
+    <script src="../script/puzzle.js"></script>
 </head>
 
-<body>
+<body onload="init()">
     <div class="navigation">
         <div class="justify-start">
             <a href="../index.html" style="padding: 0px; padding-top: 8px;"><img src="../img/TITEL.png" style="max-width: 150px;" alt=""></a>
@@ -38,21 +40,19 @@
 
     <div class="main-body">
         <section>
-            <h2 id="privacy-policy">Privacy Policy</h2>
+            <h2>Puzzle</h2>
             <p>
-                WIR SPEICHERN IHRE DATEN NICHT.
-                <br>Können wir physisch nicht. Wir haben keinen Platz, um sie zu speichern. Wir haben nicht einmal eine Server-Datenbank, um sie zu speichern.
-                <br>Was auf Ihrem Computer passiert, bleibt auf Ihrem Computer.
-            </p>
+                Klick auf das Bild um das Puzzle zu starten.
+                <br> Versuche das Puzzle zu lösen indem du die einzelnen Teile mit Hilfe der rechten Mousetaste verschiebst.
 
-            <h2 id="impressum">Impressum</h2>
-            <p>
-                Projektleitung
-                <br/>
-                <br> Aylin Schmidt
-                <br> Zügelstr. 35c
-                <br> 76744 Wörth am Rhein
             </p>
+            <canvas style="padding: 0; margin: auto; display: block; " id="puzzle"></canvas>
+        </section>
+
+        <section>
+            <h2>Ausmalbilder</h2>
+            <img src="../img/Ausmalbild.png" style="max-height: 100%; max-width: 100%;" alt="">
+            <button class="btn" type="submit"><i class="fa fa-download"></i><a href="../img/" download="Ausmalbild.png">Download</a></button>
         </section>
     </div>
 

@@ -1,14 +1,9 @@
-@font-face {
-    font-family: Cafeteria;
-    src: url("../fonts/CafeteriaBlack.ttf");
-}
-
+@import url("https://use.typekit.net/icx2kzz.css");
 html {
     scroll-behavior: smooth
 }
 
 body {
-    font-family: "Merriweather", serif;
     font-size: 100%;
     margin: 0;
     overflow-x: hidden;
@@ -18,9 +13,18 @@ body {
     flex-direction: column;
 }
 
-.title-font {
-    font-family: "Cafeteria";
+.title-font,
+.main-body h2 {
+    font-family: "cafeteria";
     font-size: 4em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.text-font,
+.main-body p {
+    font-family: "montserrat";
+    font-size: 0.9em;
     padding-top: 10px;
     padding-bottom: 10px;
 }
@@ -47,6 +51,26 @@ body {
     background: #121a2b;
 }
 
+.btn {
+    background-color: #265A5A;
+    border: none;
+    color: #D5D96E;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.btn:hover {
+    background-color: #1C4146;
+}
+
+.btn a {
+    text-decoration: none;
+    color: #D5D96E;
+    padding: 5px 5px;
+    font-size: 20px;
+}
+
 ul {
     list-style: none;
     padding-left: 0;
@@ -54,7 +78,7 @@ ul {
 
 .main-body {
     width: device-width;
-    max-width: 800px;
+    max-width: 900px;
     margin: auto;
     padding: 16px;
 }
@@ -79,6 +103,16 @@ ul {
     align-items: center;
 }
 
+.header-img {
+    width: 100%;
+    height: calc(100vh - 57px);
+}
+
+header a {
+    font-family: "cafeteria";
+    font-size: 0.9em;
+}
+
 @media only screen and (max-width: 1000px) {
     .header {
         height: -webkit-fit-content;
@@ -89,6 +123,17 @@ ul {
         height: -webkit-fit-content;
         height: -moz-fit-content;
         height: fit-content;
+    }
+    .header-img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .header-img {
+        width: 100%;
+        height: 100%;
     }
 }
 
@@ -105,6 +150,7 @@ ul {
     background-color: transparent;
     -webkit-backdrop-filter: blur(25px);
     backdrop-filter: blur(25px);
+    background-color: #265A5A;
 }
 
 .navigation a {
@@ -118,7 +164,7 @@ ul {
 
 .navigation a:hover {
     color: #E5803D;
-    background: #25385A;
+    background: #1C4146;
 }
 
 @media only screen and (max-width: 800px) {
@@ -154,6 +200,8 @@ footer {
 }
 
 footer a {
+    font-family: "montserrat";
+    font-size: 0.9em;
     text-decoration: none;
     color: #D5D96E;
     text-decoration: none;
@@ -167,8 +215,8 @@ footer a:hover {
 
 .ft-title {
     color: #E5803D;
-    font-family: "Merriweather", serif;
-    font-size: 1.375rem;
+    font-family: "cafeteria";
+    font-size: 1.5rem;
     padding-bottom: 0.625rem;
 }
 
