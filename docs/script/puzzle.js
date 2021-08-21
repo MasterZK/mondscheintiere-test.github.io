@@ -141,9 +141,14 @@
         }
         window.addEventListener("resize", resizeCanvas);
         _canvas.onmousedown = shufflePuzzle;
+        _canvas.ontouchstart = shufflePuzzle;
     }
 
     function shufflePuzzle() {
+        if (gameStart) {
+            return;
+        }
+
         _pieces = shuffleArray(_pieces);
         gameStart = true;
         _stage.clearRect(0, 0, _puzzleWidth, _puzzleHeight);
@@ -166,6 +171,7 @@
             }
         }
         _canvas.onmousedown = onPuzzleClick;
+        _canvas.ontouchstart = onPuzzleClick;
     }
 
     function onPuzzleClick(e) {
@@ -178,6 +184,12 @@
             mousePos.y = e.offsetY;
         }
 
+        if (e.type == 'touchstart' || e.type == 'touchmove' || e.type == 'touchend' || e.type == 'touchcancel') {
+            var rect = e.target.getBoundingClientRect();
+            mousePos.x = e.touches[0].clientX - rect.x;
+            mousePos.y = e.touches[0].clientY - rect.y;
+        }
+
         _currentPiece = checkPieceClicked();
         if (_currentPiece != null) {
             var currentPiecePos = puzzleIDtoPos({ x: _currentPiece.x, y: _currentPiece.y });
@@ -187,8 +199,12 @@
             var currentPieceImgPos = puzzleIDtoImgPos({ x: _currentPiece.sx, y: _currentPiece.sy });
             _stage.drawImage(_img, currentPieceImgPos.x, currentPieceImgPos.y, _imgPieceWidth, _imgPieceHeight, mousePos.x - (_pieceWidth / 2), mousePos.y - (_pieceHeight / 2), _pieceWidth, _pieceHeight);
             _stage.restore();
+
             _canvas.onmousemove = updatePuzzle;
-            _canvas.onmouseup = pieceDropped;
+            _canvas.ontouchmove = updatePuzzle;
+
+            _canvas.onmouseup == pieceDropped;
+            _canvas.ontouchend = pieceDropped;
         }
     }
 
@@ -216,6 +232,12 @@
         } else if (e.offsetX || e.offsetX == 0) {
             mousePos.x = e.offsetX;
             mousePos.y = e.offsetY;
+        }
+
+        if (e.type == 'touchstart' || e.type == 'touchmove' || e.type == 'touchend' || e.type == 'touchcancel') {
+            var rect = e.target.getBoundingClientRect();
+            mousePos.x = e.touches[0].clientX - rect.x;
+            mousePos.y = e.touches[0].clientY - rect.y;
         }
 
         _stage.clearRect(0, 0, _puzzleWidth, _puzzleHeight);
@@ -256,6 +278,10 @@
     function pieceDropped(e) {
         _canvas.onmousemove = null;
         _canvas.onmouseup = null;
+
+        _canvas.ontouchmove = null;
+        _canvas.ontouchend = null;
+
         if (_currentDropPiece != null) {
             var tmp = {
                 sx: _currentPiece.sx,
@@ -296,6 +322,11 @@
         _canvas.onmousedown = null;
         _canvas.onmousemove = null;
         _canvas.onmouseup = null;
+
+        _canvas.ontouchmove = null;
+        _canvas.ontouchend = null;
+        _canvas.ontouchstart = null;
+
         initPuzzle();
     }
 
