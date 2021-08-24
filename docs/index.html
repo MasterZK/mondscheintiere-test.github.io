@@ -22,18 +22,21 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./style/index-style.css">
+
+    <script src="./script/puzzle.js"></script>
 </head>
 
-<body>
+<body onload="init()">
     <header>
         <div class="navigation">
             <div class="justify-start">
-                <a href="./index.html" style="padding: 10px;"><img src="./img/TITEL.png" style="max-width: 150px;" alt=""></a>
+                <a href="./index.html" style="padding-bottom: 1px; padding-top: 1px;"><img src="./img/TITEL.png" style="max-width: 150px;" alt=""></a>
             </div>
-            <li><a href="">Über uns</a></li>
-            <li><a href="">Hörspiel</a></li>
-            <li><a href="">Charactere</a></li>
-            <li><a href="">Spiel und Spaß</a></li>
+            <li><a href="#hoerspiel">Hörspiel</a></li>
+            <li><a href="#ueber-uns">Über uns</a></li>
+            <li><a href="#Charaktere">Charaktere</a></li>
+            <li><a href="#spielundspass">Spiel und Spaß</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
         </div>
     </header>
 
@@ -41,9 +44,91 @@
         <div style="padding-top: 50px;"></div>
         <section class="main-section">
             <div class="main-text main-text-left">
-                <h2>Anti Mobbing, Freundschaft und Mut. Für diese Begriffe stehen wir mit unserem Kinderhörspiel „Das Geheimnis um die Mondscheintiere“</h2>
+                <h2 style="text-align: center;">Anti Mobbing, Freundschaft und Mut.
+                    <br>Für diese Begriffe stehen wir mit unserem Kinderhörspiel „Das Geheimnis um die Mondscheintiere“</h2>
             </div>
             <img class="main-image" src="./img/Mondscheintiere_pin.png" alt="">
+        </section>
+        <div style="padding-top: 50px;"></div>
+
+        <!----------------------Hoerspiel start---------------------->
+        <section id="hoerspiel" class="main-section">
+            <img class="main-image" src="./img/geheimnis_um_die_mondscheintiere.jpg" alt="">
+            <div class="main-text main-text-right">
+                <h2>Das Geheimnis um die Mondscheintiere - Das Hörspiel</h2>
+                <a>Als die 10-Jährige Nala an ihrem ersten Schultag in der neuen Schule ankommt, wird sie direkt von der
+                    angesagtesten Mädelsclique der Schule empfangen. Sie finden Nala total cool und wollen sie bei sich
+                    dabei haben. Dafür muss Nala allerdings eine Mutprobe bestehen. Sie muss dem verträumten Lilian sein
+                    Zeichenbuch klauen. Juliane, die Anführerin der Clique, denkt nämlich, dass er ein sonderbarer
+                    Außenseiter ist und will wissen, was er immer in sein Zeichenbuch zeichnet. Doch die Geschichte
+                    nimmt eine überraschende Wende und nimmt die Kinder mit auf eine abenteuerliche Reise über Mut,
+                    Freundschaft und Selbstbewusstsein.
+                    <br>Mit viel Humor, Magie und fabelhaften Ereignissen soll Kindern vermittelt werden, wie wichtig es
+                    ist, sich mutig seinen Ängsten zu stellen, als Freunde zusammenzuhalten und Selbstbewusst zu sich zu
+                    stehen.
+                </a>
+            </div>
+        </section>
+        <div style="padding-top: 50px;"></div>
+        <!----------------------Hoerspiel end---------------------->
+
+        <!----------------------Ueber uns start---------------------->
+        <section id="ueber-uns" class="main-section">
+            <img class="main-image" src="./img/banner_high-res.jpg" alt="">
+            <div class="main-text main-text-left">
+                <h2>Über uns</h2>
+                <a>Wir sind ein Team von Student*innen aus den Fachbereichen Audio, Games Programming, Film und Music Business.
+                    <br>Im Rahmen unseres Bachelorstudiengangs an der SAE Stuttgart haben wir gemeinsam ein Kinderhörspiel produziert. Unser Ziel war es, eine abenteuerliche Geschichte zu schreiben, die sowohl unterhaltsam ist, als auch einen sozial relevanten Inhalt bietet. Zur Unterstützung der inhaltlichen Thematik sollen die Einnahmen an eine gemeinnützige Organisation für gemeinnützige Zwecke gespendet werden.
+                    <br>In dem 30 Minütigen Kinderhörspiel „Das Geheimnis um die Mondscheintiere“ geht es zentral um das Thema Mobbing, aber auch Freundschaft. Es soll Kindern suggestiv zeigen, dass anders sein okay ist und wie wichtig es in einer Freundschaft ist, zueinander zu halten und sich gegenseitig stark zu machen.
+                </a>
+            </div>
+        </section>
+        <div style="padding-top: 50px;"></div>
+        <!----------------------Ueber uns end---------------------->
+
+        <!----------------------Charaktere start---------------------->
+        <h2 id="Charaktere" class="title-font" style="text-align: center;">Charaktere</h2>
+
+        <section class="main-section">
+            <div class="main-text main-text-right">
+                <h2>Leo Knizka als ...</h2>
+                <a>Der 16-jährige Leo Knizka ist ein deutscher Schauspieler und Sprecher. 
+                    <br>Bekannt ist er durch die Filme „Max und die Wilde 7“, „Rocca verändert die Welt“ und „Ein Dorf rockt ab“.     
+                </a>
+            </div>
+            <img class="main-image" src="./img/Leo.png" alt="">
+        </section>
+        <section class="main-section">
+            <div class="main-text main-text-left">
+                <h2>... Lilian</h2>
+                <a>Lilian ist ein liebevoller und verträumter Junge. 
+                    <br>Aufgrund seiner zurückgezogenen Art, ist er in der Schule nicht so beliebt und hat wenig Freunde…                    
+                    <br>Doch ganz alleine ist er wohl doch nicht              
+                </a>
+            </div>
+            <img class="main-image" src="./img/Lilian.png" alt="">
+        </section>
+        <div style="padding-top: 50px;"></div>
+
+        <section class="main-section">
+            <div class="main-text main-text-right">
+                <h2>Ines Isabell als ...</h2>
+                <a>Ines Isabell Braun ist Schauspielerin und lebt in Stuttgart.
+                    <br>Sie wirkt regelmäßig in verschiedenen Theaterproduktionen mit oder steht vor der Kamera.
+                </a>
+            </div>
+            <img class="main-image" src="./img/Ines.png" alt="">
+        </section>
+        <section class="main-section">
+            <div class="main-text main-text-left">
+                <h2>... Juliane</h2>
+                <a>Juliane ist die fiese Anführerin einer Mädchengang.
+                    <br>Sie ist in der Schule sehr beliebt und mit ihren Freundinnen hinter sich fühlt sie sich super
+                    stark.
+                    <br>Doch was passiert, wenn sie plötzlich ganz alleine ist…?
+                </a>
+            </div>
+            <img class="main-image" src="./img/Juliane.png" alt="">
         </section>
         <div style="padding-top: 50px;"></div>
 
@@ -59,7 +144,6 @@
                 </a>
             </div>
         </section>
-
         <section class="main-section">
             <div class="main-text main-text-left">
                 <h2>... Jim Jim</h2>
@@ -71,73 +155,51 @@
             </div>
             <img class="main-image" src="./img/Jimjim.png" alt="">
         </section>
-
-        <div style="padding-top: 50px;"></div>
-
-        <section class="main-section">
-            <div class="main-text main-text-right">
-                <h2>Ines Isabell als ...</h2>
-                <a>Ines Isabell Braun ist Schauspielerin und lebt in Stuttgart.
-                    <br>Sie wirkt regelmäßig in verschiedenen Theaterproduktionen mit oder steht vor der Kamera.
-                </a>
-            </div>
-            <img class="main-image" src="./img/Ines.png" alt="">
-        </section>
-
-        <section class="main-section">
-            <div class="main-text main-text-left">
-                <h2>... Juliane</h2>
-                <a>Juliane ist die fiese Anführerin einer Mädchengang.
-                    <br>Sie ist in der Schule sehr beliebt und mit ihren Freundinnen hinter sich fühlt sie sich super
-                    stark.
-                    <br>Doch was passiert, wenn sie plötzlich ganz alleine ist…?
-                </a>
-            </div>
-            <img class="main-image" src="./img/Juliane.png" alt="">
-        </section>
-
         <div style="padding-top: 50px;"></div>
 
         <section class="main-section">
             <div class="main-text main-text-right">
                 <h2>Mario Hassert als ...</h2>
                 <a>Mario Hassert ist einer der bekanntesten deutschen Werbesprecher.
-                    <br>Seine markante, warme Stimme ist bestimmt vielen z. B. aus den TV-Spots von Coca Cola , Jochen Schweizer oder Köstritzer bekannt.
+                    <br>Seine markante, warme Stimme ist bestimmt vielen z. B. aus den TV-Spots von Coca Cola , Jochen
+                    Schweizer oder Köstritzer bekannt.
                 </a>
             </div>
             <img class="main-image" src="./img/Mario.png" alt="">
         </section>
-
         <section class="main-section">
             <div class="main-text main-text-left">
                 <h2>... Moon</h2>
                 <a>JWir können es kaum abwarten, bis ihr unseren poetischen Wolf Moon endlich kennenlernt.
-                    <br>Obwohl er manchmal durch seine sehr elegante Wortwahl etwas arrogant rüberkommt, ist er ein sehr guter und fürsorglicher Freund.
-                    <br>Allerdings hat er große Angst falsche Töne zu jaulen und tut es deshalb nicht. Aber vielleicht kann ihn ja doch noch etwas von seiner Angst befreien…
+                    <br>Obwohl er manchmal durch seine sehr elegante Wortwahl etwas arrogant rüberkommt, ist er ein sehr
+                    guter und fürsorglicher Freund.
+                    <br>Allerdings hat er große Angst falsche Töne zu jaulen und tut es deshalb nicht. Aber vielleicht
+                    kann ihn ja doch noch etwas von seiner Angst befreien…
                     <br>A-Wuuuuhhh
                 </a>
             </div>
             <img class="main-image" src="./img/moon.png" alt="">
         </section>
-
         <div style="padding-top: 50px;"></div>
 
         <section class="main-section">
             <div class="main-text main-text-right">
                 <h2>Claudio Maniscalco als ...</h2>
                 <a>Claudio Maniscalco ist nicht nur visuell als Schauspieler tätig.
-                    <br>Stimmlich agierend ist er parallel seit 38 Jahren auch als Sprecher in unzähligen Hörspielen, Dokus, Werbespots und über 900 Filmsynchronisationen zu erleben.
+                    <br>Stimmlich agierend ist er parallel seit 38 Jahren auch als Sprecher in unzähligen Hörspielen,
+                    Dokus, Werbespots und über 900 Filmsynchronisationen zu erleben.
                     <br>Mit seiner markanten Stimme leiht er vielen Hollywood Schauspielern seine Stimme.
-                    <br>Zu seinen populärsten Kollegen zählen (u.a.) Andy Garcia, Ru Paul, der Sänger Robbie Williams, Luciano Pavarotti.
+                    <br>Zu seinen populärsten Kollegen zählen (u.a.) Andy Garcia, Ru Paul, der Sänger Robbie Williams,
+                    Luciano Pavarotti.
                 </a>
             </div>
             <img class="main-image" src="./img/Claudio.png" alt="">
         </section>
-
         <section class="main-section">
             <div class="main-text main-text-left">
                 <h2>... Pepe</h2>
-                <a>Pepe ist ein sprechender Esel und liebt es mit seinem italienischen Akzent schlaue Weisheiten rauszuposaunen.
+                <a>Pepe ist ein sprechender Esel und liebt es mit seinem italienischen Akzent schlaue Weisheiten
+                    rauszuposaunen.
                     <br>Er liebt das Leben und möchte es am liebsten nur genießen!
                     <br>Deswegen hasst er auch Streit und Boshaftigkeit!
                     <br>I-AAAH!!
@@ -145,26 +207,60 @@
             </div>
             <img class="main-image" src="./img/Pepe.png" alt="">
         </section>
+        <div style="padding-top: 50px;"></div>
+
+        <section class="main-section">
+            <div class="main-text main-text-right">
+                <h2>Omid Eftekhari als Erzähler</h2>
+                <a>Omid Eftekhari ist ein deutscher Sprecher für unter anderem Hörbücher, Hörspiele und Dokumentationen. 
+                    <br>Mit seiner tiefen und beruhigenden Stimme verzaubert er die Hörer.                    
+                    <br>Er selbst bezeichnet sich als Erzähler und auch genau diese Rolle übernimmt er in unserer Geschichte um das Geheimnis der Mondscheintiere. 
+                    <br>Seid gespannt und lasst euch von Omid auf der Abenteuerreise begleiten.                     
+                </a>
+            </div>
+            <img class="main-image" src="./img/Omid.png" alt="">
+        </section>
+        <div style="padding-top: 50px;"></div>
+        <!----------------------Charaktere end---------------------->
+
+        <!----------------------Spiel und Spaß start---------------------->
+        <h2 id="spielundspass" class="title-font" style="text-align: center;">Spiel und Spaß</h2>
+
+        <h2>Puzzle</h2>
+        <p>
+            Klick auf das Bild um das Puzzle zu starten.
+            <br> Versuche das Puzzle zu lösen indem du die einzelnen Teile mit Hilfe der rechten Mousetaste verschiebst.
+        </p>
+        <canvas style="padding: 0; margin: auto; display: block; touch-action: none; " id="puzzle"></canvas>
+
+        <div style="padding-top: 50px;"></div>
+
+        <h2>Ausmalbilder</h2>
+        <button class="btn" type="submit"><i class="fa fa-download"></i><a href="./img/Ausmalbild.jpg" download="Ausmalbild.jpg">Download</a></button>
+        <img src="./img/Ausmalbild.png" style="max-height: 50%; max-width: 50%;" alt="">
+
+        <div style="padding-top: 50px;"></div>
+        <!----------------------Spiel und Spaß end---------------------->
     </div>
 
     <footer>
-        <section class="ft-main">
+        <section id="kontakt" class="ft-main">
             <div class="ft-main-item">
-                <h2 class="ft-title">Folge Uns</h2>
+                <h2 class="ft-title">Folge uns</h2>
                 <ul>
-                    <li><a href="./index.html#hoerspiel"><i class="fa fa-instagram"></i> Instagram</a></li>
-                    <li><a href="./index.html#hoerspiel"><i class="fa fa-facebook"></i> Facebook</a></li>
-                    <li><a href="./index.html#hoerspiel"><i class="fa fa-spotify"></i> Youtube</a></li>
+                    <li><a href="https://instagram.com/die.mondscheintiere?utm_medium=copy_link" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram"></i> Instagram</a></li>
+                    <li><a href=""><i class="fa fa-facebook"></i> Facebook</a></li>
+                    <li><a href=""><i class="fa fa-spotify"></i> Youtube</a></li>
                 </ul>
             </div>
 
             <img class="ft-main-logo" src="./img/book.png" style="min-width: none; max-width: none; width: 200px;" alt="">
 
             <div class="ft-main-item">
-                <h2 class="ft-title">Schreib Uns</h2>
+                <h2 class="ft-title">Schreibe uns</h2>
                 <ul>
-                    <li><a href="./index.html#hoerspiel"><i class="fa fa-at"></i> Email</a></li>
-                    <li><a href="./index.html#hoerspiel"><i class="fa fa-at"></i> Kontakt</a></li>
+                    <li><a href=""><i class="fa fa-at"></i> Email</a></li>
+                    <li><a href=""><i class="fa fa-at"></i> Kontakt</a></li>
                 </ul>
             </div>
         </section>

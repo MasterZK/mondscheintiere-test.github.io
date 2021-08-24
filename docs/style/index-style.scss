@@ -15,7 +15,7 @@ body {
 
 .title-font {
     font-family: "cafeteria";
-    font-size: 3em;
+    font-size: 5em;
     padding-top: 10px;
     padding-bottom: 10px;
 }
@@ -58,6 +58,26 @@ header a {
 ul {
     list-style: none;
     padding-left: 0;
+}
+
+.btn {
+    background-color: #265A5A;
+    border: none;
+    color: #D5D96E;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.btn:hover {
+    background-color: #1C4146;
+}
+
+.btn a {
+    text-decoration: none;
+    color: #D5D96E;
+    padding: 5px 5px;
+    font-size: 20px;
 }
 
 .main-body {
@@ -140,7 +160,8 @@ ul {
 
 .navigation a {
     color: #D5D96E;
-    font-size: 24px;
+    font-family: "cafeteria";
+    font-size: 23px;
     display: block;
     text-align: center;
     padding: 1em;
