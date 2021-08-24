@@ -98,6 +98,7 @@ ul {
 .main-section h2 {
     font-family: "cafeteria";
     font-size: 3em;
+    text-align: center;
 }
 
 .main-body p,
@@ -106,7 +107,8 @@ ul {
     font-size: 1em;
     padding-top: 2px;
     padding-bottom: 10px;
-    line-height: 1.4;
+    line-height: 1.5;
+    text-align: center;
 }
 
 .main-image,
@@ -130,15 +132,15 @@ ul {
 .main-text-right {
     order: 2;
     padding-left: 100px;
-    text-align: right;
-    align-items: flex-end;
+    //text-align: right;
+    //align-items: flex-end;
 }
 
 .main-text-left {
     order: -1;
     padding-right: 100px;
-    text-align: left;
-    align-items: flex-start;
+    //text-align: left;
+    //align-items: flex-start;
 }
 
 .justify-start {
