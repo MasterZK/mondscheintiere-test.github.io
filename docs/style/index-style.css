@@ -73,6 +73,10 @@ ul {
   padding: 12px 30px;
   cursor: pointer;
   font-size: 20px;
+  width: 205px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .btn:hover {

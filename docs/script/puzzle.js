@@ -82,7 +82,7 @@
             return;
         }
         _stage.drawImage(_img, 0, 0, _img.width, _img.height, 0, 0, _puzzleWidth, _puzzleHeight);
-        createTitle("Klick auf das Bild um das Puzzle zu starten!");
+        createTitle("Klick auf das Bild, um das Puzzle zu starten!");
     }
 
     function initPuzzle() {
@@ -94,7 +94,7 @@
         _currentPiece = null;
         _currentDropPiece = null;
         _stage.drawImage(_img, 0, 0, _img.width, _img.height, 0, 0, _puzzleWidth, _puzzleHeight);
-        createTitle("Klick auf das Bild um das Puzzle zu starten!");
+        createTitle("Klick auf das Bild, um das Puzzle zu starten!");
         buildPieces();
     }
 
