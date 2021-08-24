@@ -2,7 +2,7 @@
     const PUZZLE_HOVER_TINT = '#009900';
     const PuzzleSizeDefault = { x: 780, y: 780 }
     const PuzzleSizeMedium = { x: 600, y: 600 } //at max width 800
-    const PuzzleSizeMobile = { x: 380, y: 380 } //at max witth 500   
+    const PuzzleSizeMobile = { x: 370, y: 370 } //at max witth 500   
 
     var _stage;
     var _canvas;
@@ -203,7 +203,7 @@
             _canvas.onmousemove = updatePuzzle;
             _canvas.ontouchmove = updatePuzzle;
 
-            _canvas.onmouseup == pieceDropped;
+            _canvas.onmouseup = pieceDropped;
             _canvas.ontouchend = pieceDropped;
         }
     }

@@ -13,21 +13,24 @@ body {
     flex-direction: column;
 }
 
-.title-font,
-.main-body h2 {
+.title-font {
     font-family: "cafeteria";
-    font-size: 4em;
+    font-size: 3em;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
-.text-font,
-.main-body p {
+.text-font {
     font-family: "montserrat";
-    font-size: 0.9em;
+    font-size: 1em;
     padding-top: 10px;
     padding-bottom: 10px;
     line-height: 1.4;
+}
+
+header a {
+    font-family: "cafeteria";
+    font-size: 0.9em;
 }
 
 * {
@@ -52,26 +55,6 @@ body {
     background: #121a2b;
 }
 
-.btn {
-    background-color: #265A5A;
-    border: none;
-    color: #D5D96E;
-    padding: 12px 30px;
-    cursor: pointer;
-    font-size: 20px;
-}
-
-.btn:hover {
-    background-color: #1C4146;
-}
-
-.btn a {
-    text-decoration: none;
-    color: #D5D96E;
-    padding: 5px 5px;
-    font-size: 20px;
-}
-
 ul {
     list-style: none;
     padding-left: 0;
@@ -79,63 +62,63 @@ ul {
 
 .main-body {
     width: device-width;
-    max-width: 900px;
+    max-width: 90%;
     margin: auto;
     padding: 16px;
 }
 
-.header {
-    background: url("../img/banner_high-res.jpg") no-repeat center center fixed;
-    background-size: cover;
-    height: 100vmin;
-    max-width: 100%;
-    position: relative;
-}
-
-.header-box {
-    min-width: 100%;
-    height: calc(100vh - 57px);
-    line-height: 1;
-    padding: 15px 15px;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+.main-section {
+    padding-top: 10px;
     display: flex;
-    justify-content: center;
     align-items: center;
-}
-
-.header-img {
     width: 100%;
-    height: calc(100vh - 57px);
+    justify-content: space-around;
 }
 
-header a {
+.main-section h2 {
     font-family: "cafeteria";
-    font-size: 0.9em;
+    font-size: 3em;
 }
 
-@media only screen and (max-width: 1000px) {
-    .header {
-        height: -webkit-fit-content;
-        height: -moz-fit-content;
-        height: fit-content;
-    }
-    .header-box {
-        height: -webkit-fit-content;
-        height: -moz-fit-content;
-        height: fit-content;
-    }
-    .header-img {
-        width: 100%;
-        height: 100%;
-    }
+.main-body p,
+.main-section a {
+    font-family: "montserrat";
+    font-size: 1em;
+    padding-top: 2px;
+    padding-bottom: 10px;
+    line-height: 1.4;
 }
 
-@media only screen and (max-width: 500px) {
-    .header-img {
-        width: 100%;
-        height: 100%;
-    }
+.main-image,
+.main-text {
+    display: flex;
+    width: 50%;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.main-image {
+    max-width: 400px;
+    margin: auto;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.main-text {}
+
+.main-text-right {
+    order: 2;
+    padding-left: 100px;
+    text-align: right;
+    align-items: flex-end;
+}
+
+.main-text-left {
+    order: -1;
+    padding-right: 100px;
+    text-align: left;
+    align-items: flex-start;
 }
 
 .justify-start {
@@ -146,6 +129,7 @@ header a {
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-end;
+    align-items: center;
     list-style: none;
     margin: 0;
     background-color: transparent;
@@ -156,7 +140,7 @@ header a {
 
 .navigation a {
     color: #D5D96E;
-    font-size: large;
+    font-size: 24px;
     display: block;
     text-align: center;
     padding: 1em;
@@ -177,6 +161,7 @@ header a {
 @media only screen and (max-width: 600px) {
     .navigation {
         flex-flow: column wrap;
+        align-items: stretch;
         padding: 0;
     }
     .navigation a {
@@ -217,19 +202,24 @@ footer a:hover {
 .ft-title {
     color: #E5803D;
     font-family: "cafeteria";
-    font-size: 1.5rem;
-    padding-bottom: 0.625rem;
+    font-size: 1.7rem;
 }
 
 .ft-main {
     padding: 1.25rem 1.875rem;
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
+    justify-content: space-around;
 }
 
 .ft-main-item {
     padding: 1.25rem;
-    min-width: 200px;
+    max-width: 200px;
+    line-height: 2;
+}
+
+.ft-main-logo {
+    padding: 0.6rem;
 }
 
 .ft-social {
@@ -270,7 +260,7 @@ footer a:hover {
     flex: 1;
 }
 
-@media only screen and (min-width: 400px) {
+@media only screen and (max-width: 400px) {
     .ft-main {
         justify-content: space-around;
     }
@@ -280,12 +270,22 @@ footer a:hover {
     }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (max-width: 1200px) {
     .ft-main {
         justify-content: space-evenly;
     }
     .ft-social-list li {
         padding-left: 10px;
         padding-right: 10px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .ft-main-logo {
+        order: -1;
+    }
+    .ft-main {
+        flex-flow: column wrap;
+        padding: 0;
     }
 }
