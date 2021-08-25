@@ -164,6 +164,42 @@ ul {
   padding-right: 100px;
 }
 
+#Ausmalbild {
+  max-height: 50%;
+  max-width: 50%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+@media only screen and (max-width: 800px) {
+  .main-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+  }
+  .main-image {
+    -webkit-box-ordinal-group: -1;
+        -ms-flex-order: -2;
+            order: -2;
+    max-width: 300px;
+  }
+  .main-image,
+  .main-text {
+    width: 100%;
+  }
+  .main-text-right,
+  .main-text-left {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  #Ausmalbild {
+    max-height: 80%;
+    max-width: 80%;
+  }
+}
+
 .justify-start {
   margin-right: auto;
 }
@@ -212,7 +248,7 @@ ul {
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 750px) {
   .navigation {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -289,28 +325,6 @@ footer a:hover {
   padding: 0.6rem;
 }
 
-.ft-social {
-  padding: 0 1.875rem 1.25rem;
-}
-
-.ft-social-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border-top: 1px #777 solid;
-  padding-top: 1.25rem;
-}
-
-.ft-social-list li {
-  margin: 0.5rem;
-  padding-left: 10px;
-  padding-right: 10px;
-  font-size: 1.25rem;
-}
-
 .ft-legal {
   padding: 0.9375rem 1.875rem;
   background-color: #1C4146;
@@ -341,10 +355,6 @@ footer a:hover {
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
-  .ft-social-list li {
-    padding-left: 5px;
-    padding-right: 5px;
-  }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -352,10 +362,6 @@ footer a:hover {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-  }
-  .ft-social-list li {
-    padding-left: 10px;
-    padding-right: 10px;
   }
 }
 
@@ -370,6 +376,9 @@ footer a:hover {
     -webkit-box-direction: normal;
         -ms-flex-flow: column wrap;
             flex-flow: column wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 0;
   }
 }

@@ -1,8 +1,9 @@
     const PUZZLE_DIFFICULTY = 4;
     const PUZZLE_HOVER_TINT = '#009900';
-    const PuzzleSizeDefault = { x: 780, y: 780 }
-    const PuzzleSizeMedium = { x: 600, y: 600 } //at max width 800
-    const PuzzleSizeMobile = { x: 370, y: 370 } //at max witth 500   
+    const PuzzleSizeDefault = { x: 750, y: 750 }
+    const PuzzleSizeMedium = { x: 600, y: 600 }
+    const PuzzleSizeSmall = { x: 500, y: 500 }
+    const PuzzleSizeMobile = { x: 350, y: 350 }
 
     var _stage;
     var _canvas;
@@ -40,10 +41,13 @@
     function determineSize() {
         _currentPuzzleSize = PuzzleSizeDefault;
 
-        if (window.innerWidth <= 800) {
+        if (window.innerWidth <= 1000) {
             _currentPuzzleSize = PuzzleSizeMedium;
         }
-        if (window.innerWidth <= 500) {
+        if (window.innerWidth <= 800) {
+            _currentPuzzleSize = PuzzleSizeSmall;
+        }
+        if (window.innerWidth <= 600) {
             _currentPuzzleSize = PuzzleSizeMobile;
         }
     }
